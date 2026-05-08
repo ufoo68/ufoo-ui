@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #0a0a0b;
+  color: white;
+}
+
+@layer components {
+  .ufoo-glow {
+    @apply transition-all duration-300;
+  }
+  .ufoo-glow:hover {
+    text-shadow: 0 0 8px currentColor;
+  }
+}
