@@ -1,31 +1,54 @@
 {
   "name": "ufoo-ui",
   "version": "0.1.0",
+  "description": "React UI primitives for slide-editor workflows.",
   "type": "module",
+  "license": "MIT",
+  "author": "ufoo68",
+  "homepage": "https://github.com/ufoo68/ufoo-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ufoo68/ufoo-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ufoo68/ufoo-ui/issues"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "tailwindcss",
+    "storybook",
+    "slide-editor"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "files": [
     "dist"
   ],
   "main": "./dist/ufoo-ui.umd.cjs",
   "module": "./dist/ufoo-ui.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/ufoo-ui.js",
       "require": "./dist/ufoo-ui.umd.cjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/src/index.d.ts"
     },
     "./style.css": "./dist/style.css"
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "prepublishOnly": "npm run build",
+    "pack:dry-run": "npm pack --dry-run",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.1.2",
@@ -42,6 +65,8 @@
     "@vitest/coverage-v8": "^4.1.5",
     "playwright": "^1.59.1",
     "postcss": "^8.4.38",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
     "storybook": "^10.3.6",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3",

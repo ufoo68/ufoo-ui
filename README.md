@@ -91,5 +91,22 @@ Slide navigator item with slide number, title, metadata, selection state, and pr
 ### InspectorPanel / InspectorSection / InspectorField / InspectorInput
 Property editor primitives for canvas and selection settings.
 
+## Publishing
+
+Before publishing, verify the build and package contents:
+
+```bash
+npm run build
+npm run pack:dry-run
+```
+
+Publish the package:
+
+```bash
+npm publish
+```
+
+`prepublishOnly` runs the production build automatically before `npm publish`.
+
 ## License
 MIT
