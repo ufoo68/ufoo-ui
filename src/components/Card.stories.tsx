@@ -27,3 +27,16 @@ export const Alert: Story = {
     children: 'UNAUTHORIZED ACCESS DETECTED IN SECTOR 7G.',
   },
 };
+
+export const WithContentSlot: Story = {
+  render: () => (
+    <Card className="w-96 border border-ufoo-panel-border bg-ufoo-panel">
+      <Card.Content className="p-5">
+        <h3 className="text-lg font-black text-ufoo-ink">Deck summary</h3>
+        <p className="text-sm leading-6 text-ufoo-muted">
+          A compact card pattern for dashboard rows, login panels, loading blocks, and review results.
+        </p>
+      </Card.Content>
+    </Card>
+  ),
+};
