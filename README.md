@@ -1,9 +1,10 @@
 # ufoo UI
 
-A cool, Cyberpunk-themed React UI library built with Tailwind CSS and Vite.
+A React UI library built with Tailwind CSS and Vite. The first target app is `lt-slide-editor`, so the component set now focuses on slide-editor screens: toolbars, slide thumbnails, canvas shells, and inspector panels.
 
 ## Features
-- **Cyberpunk Aesthetic**: Neon glows, sharp angles, and futuristic vibes.
+- **Slide Editor Primitives**: Shell, toolbar, thumbnail list, and inspector controls for editor-style apps.
+- **Cyberpunk Aesthetic**: Neon accents, dark panels, and sharp visual contrast.
 - **TypeScript First**: Full type safety out of the box.
 - **Tailwind Powered**: Easily customizable and lightweight.
 - **Vite Optimized**: Fast and modern build pipeline.
@@ -25,13 +26,44 @@ import 'ufoo-ui/style.css';
 2. Use the components:
 
 ```tsx
-import { Button, Card } from 'ufoo-ui';
+import {
+  EditorShell,
+  InspectorField,
+  InspectorInput,
+  InspectorPanel,
+  InspectorSection,
+  SlideThumbnail,
+  ToolButton,
+  Toolbar,
+  ToolbarGroup,
+} from 'ufoo-ui';
 
 function App() {
   return (
-    <Card title="System Alert">
-      <Button variant="neon">Execute Protocol</Button>
-    </Card>
+    <EditorShell
+      toolbar={
+        <Toolbar>
+          <ToolbarGroup label="Insert">
+            <ToolButton label="Select" icon="↖" active />
+            <ToolButton label="Text" icon="T" />
+          </ToolbarGroup>
+        </Toolbar>
+      }
+      sidebar={
+        <SlideThumbnail slideNumber={1} title="Opening" selected />
+      }
+      inspector={
+        <InspectorPanel title="Selection">
+          <InspectorSection title="Position">
+            <InspectorField label="X">
+              <InspectorInput defaultValue="120" unit="px" />
+            </InspectorField>
+          </InspectorSection>
+        </InspectorPanel>
+      }
+    >
+      <div className="aspect-video bg-white">Slide canvas</div>
+    </EditorShell>
   );
 }
 ```
@@ -46,6 +78,18 @@ Futuristic buttons with neon glow effects.
 ### Card
 Angled cards with neon borders.
 - `title`: String (optional)
+
+### EditorShell
+Three-pane editor layout with optional `toolbar`, `sidebar`, `inspector`, and `statusbar` slots.
+
+### Toolbar / ToolbarGroup / ToolButton
+Compact editor toolbar primitives for actions such as select, text, shapes, undo, redo, and present.
+
+### SlideThumbnail
+Slide navigator item with slide number, title, metadata, selection state, and preview content.
+
+### InspectorPanel / InspectorSection / InspectorField / InspectorInput
+Property editor primitives for canvas and selection settings.
 
 ## License
 MIT

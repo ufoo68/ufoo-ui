@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-ufoo-neon: #00f3ff;
+  --color-ufoo-pink: #ff00ff;
+  --color-ufoo-dark: #0a0a0b;
+  --color-ufoo-gray: #1a1a1c;
+  --color-ufoo-panel: #15171d;
+  --color-ufoo-workspace: #0f1117;
+  --color-ufoo-canvas: #f8fafc;
+  --color-ufoo-input: #0c0f15;
+  --color-ufoo-ink: #f6f7fb;
+  --color-ufoo-muted: #8b93a7;
+  --color-ufoo-panel-border: #2a2f3a;
+
+  --shadow-neon: 0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3);
+  --shadow-neon-pink: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3);
+}
 
 :root {
   background-color: #0a0a0b;
