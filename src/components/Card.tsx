@@ -30,7 +30,7 @@ export const Card: CardComponent = ({ children, title, className = '' }) => {
 
   return (
     <div className={`relative overflow-hidden rounded-lg bg-ufoo-gray border-l-4 border-ufoo-neon shadow-neon ${className}`}>
-      <div className="absolute top-0 right-0 w-8 h-8 bg-ufoo-neon clip-[polygon(100%_0,0_0,100%_100%)]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-ufoo-neon/70" />
       {title && (
         <h3 className="px-4 pt-4 text-ufoo-neon font-black italic uppercase tracking-tighter">
           {title}
