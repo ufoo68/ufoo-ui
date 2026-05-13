@@ -1,9 +1,9 @@
 # ufoo UI
 
-A React UI library built with Tailwind CSS and Vite. The first target app is `lt-slide-editor`, so the component set now focuses on slide-editor screens: toolbars, slide thumbnails, canvas shells, and inspector panels.
+A React UI library built with Tailwind CSS and Vite.
 
 ## Features
-- **Slide Editor Primitives**: Shell, toolbar, thumbnail list, and inspector controls for editor-style apps.
+
 - **Cyberpunk Aesthetic**: Neon accents, dark panels, and sharp visual contrast.
 - **TypeScript First**: Full type safety out of the box.
 - **Tailwind Powered**: Easily customizable and lightweight.
@@ -90,23 +90,6 @@ Slide navigator item with slide number, title, metadata, selection state, and pr
 
 ### InspectorPanel / InspectorSection / InspectorField / InspectorInput
 Property editor primitives for canvas and selection settings.
-
-## Publishing
-
-Before publishing, verify the build and package contents:
-
-```bash
-npm run build
-npm run pack:dry-run
-```
-
-Publish the package:
-
-```bash
-npm publish
-```
-
-`prepublishOnly` runs the production build automatically before `npm publish`.
 
 ## License
 MIT
