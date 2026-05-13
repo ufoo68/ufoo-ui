@@ -1,4 +1,4 @@
-# ufoo UI
+# ufoo-ui
 
 A React UI library built with Tailwind CSS and Vite.
 
