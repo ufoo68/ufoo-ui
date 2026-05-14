@@ -51,7 +51,7 @@ export const Large: Story = {
   },
 };
 
-export const HeroUiReplacement: Story = {
+export const ButtonSet: Story = {
   render: () => (
     <div className="flex flex-wrap items-center gap-3 bg-ufoo-dark p-6">
       <Button variant="primary">Save</Button>
