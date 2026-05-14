@@ -32,6 +32,8 @@ import {
   InspectorInput,
   InspectorPanel,
   InspectorSection,
+  QuizChoice,
+  QuizQuestionCard,
   SlideThumbnail,
   ToolButton,
   Toolbar,
@@ -68,6 +70,39 @@ function App() {
 }
 ```
 
+### Quiz authoring example
+
+```tsx
+import { QuizChoice, QuizQuestionCard, QuizStats } from 'ufoo-ui';
+
+function QuizEditor() {
+  return (
+    <div className="grid gap-4">
+      <QuizStats
+        items={[
+          { label: 'Questions', value: 12, tone: 'accent' },
+          { label: 'Total score', value: '120 pt' },
+          { label: 'Estimated', value: '8 min' },
+        ]}
+      />
+      <QuizQuestionCard
+        difficulty="normal"
+        points={10}
+        questionNumber={3}
+        status="ready"
+        title="Which step should happen before publishing a package?"
+        type="single"
+      >
+        <QuizChoice label="A">Push directly from a local branch</QuizChoice>
+        <QuizChoice label="B" state="correct">
+          Run a dry-run package check and review the generated files
+        </QuizChoice>
+      </QuizQuestionCard>
+    </div>
+  );
+}
+```
+
 ## Components
 
 ### Button
@@ -90,6 +125,9 @@ Slide navigator item with slide number, title, metadata, selection state, and pr
 
 ### InspectorPanel / InspectorSection / InspectorField / InspectorInput
 Property editor primitives for canvas and selection settings.
+
+### QuizQuestionCard / QuizChoice / QuizStats
+Quiz authoring primitives for question cards, answer choices, correctness states, points, and overview metrics.
 
 ## License
 MIT

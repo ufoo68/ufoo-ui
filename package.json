@@ -1,6 +1,6 @@
 {
   "name": "ufoo-ui",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "React UI primitives for slide-editor workflows.",
   "type": "module",
   "license": "MIT",
