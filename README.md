@@ -42,6 +42,8 @@ import {
   ProjectCard,
   SkillBadge,
   SkillGroup,
+  NavigationHeader,
+  NavigationItem,
 } from 'ufoo-ui';
 
 function App() {
@@ -106,6 +108,26 @@ import {
 </SkillGroup>
 ```
 
+### Navigation header example
+
+```tsx
+import { NavigationHeader, NavigationItem } from 'ufoo-ui';
+
+<NavigationHeader
+  brand={<Link href="#top">ufoo68</Link>}
+  navigation={
+    <>
+      <NavigationItem active href="#top">トップ</NavigationItem>
+      <NavigationItem href="#personal">個人開発</NavigationItem>
+      <NavigationItem href="#work">仕事での開発</NavigationItem>
+      <NavigationItem href="#skills">スキルセット</NavigationItem>
+      <NavigationItem href="#contact">問い合わせ</NavigationItem>
+    </>
+  }
+  actions={<Link href="#contact">Contact</Link>}
+/>
+```
+
 ### Quiz authoring example
 
 ```tsx
@@ -167,6 +189,9 @@ Quiz authoring primitives for question cards, answer choices, correctness states
 
 ### PortfolioSection / ProjectCard / SkillBadge / SkillGroup
 Portfolio page primitives for section layout, CMS-backed project cards, technology tags, and categorized skills.
+
+### NavigationHeader / NavigationItem
+Responsive portfolio navigation with brand and action slots, active states, sticky positioning, and a no-JavaScript mobile menu.
 
 ## License
 MIT
