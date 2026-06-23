@@ -17,11 +17,6 @@
   --shadow-neon-pink: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3);
 }
 
-:root {
-  background-color: #0a0a0b;
-  color: white;
-}
-
 @layer components {
   .ufoo-glow {
     @apply transition-all duration-300;

@@ -12,4 +12,5 @@ export * from './components/Switch';
 export * from './components/Tabs';
 export * from './components/Tooltip';
 export * from './components/Quiz';
+export * from './components/Portfolio';
 

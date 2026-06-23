@@ -38,6 +38,10 @@ import {
   ToolButton,
   Toolbar,
   ToolbarGroup,
+  PortfolioSection,
+  ProjectCard,
+  SkillBadge,
+  SkillGroup,
 } from 'ufoo-ui';
 
 function App() {
@@ -68,6 +72,38 @@ function App() {
     </EditorShell>
   );
 }
+```
+
+### Portfolio example
+
+```tsx
+import {
+  PortfolioSection,
+  ProjectCard,
+  SkillBadge,
+  SkillGroup,
+} from 'ufoo-ui';
+
+<PortfolioSection title="個人開発" eyebrow="Selected work" tone="muted">
+  <div className="grid gap-6 md:grid-cols-3">
+    {products.map((product) => (
+      <ProjectCard
+        key={product.id}
+        title={product.title}
+        description={product.detail}
+        media={<img src={product.image.url} alt="" />}
+        technologies={product.technologies}
+        action={<Link href={product.url}>詳細を見る →</Link>}
+      />
+    ))}
+  </div>
+</PortfolioSection>
+
+<SkillGroup title="言語">
+  {languages.map((skill) => (
+    <SkillBadge key={skill.id} name={skill.title} meta={`${skill.years}年`} />
+  ))}
+</SkillGroup>
 ```
 
 ### Quiz authoring example
@@ -128,6 +164,9 @@ Property editor primitives for canvas and selection settings.
 
 ### QuizQuestionCard / QuizChoice / QuizStats
 Quiz authoring primitives for question cards, answer choices, correctness states, points, and overview metrics.
+
+### PortfolioSection / ProjectCard / SkillBadge / SkillGroup
+Portfolio page primitives for section layout, CMS-backed project cards, technology tags, and categorized skills.
 
 ## License
 MIT
