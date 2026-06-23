@@ -1,0 +1,4 @@
+interface:
+  display_name: "ufoo-ui Development"
+  short_description: "Build and maintain reusable ufoo-ui React components"
+  default_prompt: "Use $ufoo-ui to add or update a reusable component in this UI library."
